@@ -1,3 +1,5 @@
 dados/.leader_token
 dados/respostas_clinicas.jsonl
 dados/slots_clinicas.json
+__pycache__/
+*.py[cod]
