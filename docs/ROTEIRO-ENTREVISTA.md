@@ -8,7 +8,7 @@
 - **Glosas abandonadas:** 0/0 (0.00%)
 - **Sinal de interesse:** 0/0 (0.00%)
 - **Slots eliminados:** 0/10
-- **Atualizado em:** 2026-10-23T20:51:49+00:00
+- **Atualizado em:** 2026-10-26T17:34:13+00:00
 
 ## Distribuição por persona
 

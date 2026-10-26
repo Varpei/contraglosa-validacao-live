@@ -27,6 +27,8 @@ def write_exports(payload):
     EXPORT_PATH.parent.mkdir(parents=True, exist_ok=True)
     EXPORT_PATH.write_text(payload["consolidado_md"], encoding="utf-8")
     INDIVIDUALS_PATH.mkdir(parents=True, exist_ok=True)
+    for existing in INDIVIDUALS_PATH.glob("entrevista_*.md"):
+        existing.unlink()
     for path, content in payload["arquivos_individuais"].items():
         target = ROOT / path
         target.parent.mkdir(parents=True, exist_ok=True)
@@ -54,6 +56,7 @@ def local_payload(responses):
     summaries = ["# Roteiro de Entrevista — Validação de Mercado", "", "## Resumo das entrevistas", ""]
     for index, response in enumerate(responses, 1):
         answers = response.get("answers", {})
+        persona = answers.get("perfil", "—")
         lines = [
             f"# Entrevista #{index:02d}",
             "",
